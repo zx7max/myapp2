@@ -1,8 +1,10 @@
-import { Footer, Content } from "antd/es/layout/layout";
+import { Footer, Content, Header } from "antd/es/layout/layout";
 import { Menu } from "antd";
 
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Link, Outlet } from "react-router-dom";
 
+
+const setActive = ({isActive}) => isActive ? 'active-link' : '';
 
 function LayOut() {
     const items = [
@@ -18,8 +20,13 @@ function LayOut() {
 
     return (
         <div>
-            <Menu mode="horizontal" items={items} />
+            <Header>
+                <NavLink to="/" className={setActive}> хомяк </NavLink>
+                <NavLink to="/about" className={setActive}> О странице </NavLink>
+                </Header>
             
+            <Menu mode="horizontal" items={items} />
+
             <Content>
                 <Outlet/>
             </Content>
