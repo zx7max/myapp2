@@ -6,6 +6,8 @@ import { NavLink, Link, Outlet } from "react-router-dom";
 
 const setActive = ({isActive}) => isActive ? 'active-link' : '';
 
+const setActiveStyle = ({isActive}) => ({color: isActive})
+
 function LayOut() {
     const items = [
         {
