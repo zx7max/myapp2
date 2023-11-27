@@ -17,7 +17,16 @@ function LayOut() {
         {
             label: <Link to="/about"> О странице </Link>,
             key: 'about'
-        }    
+        },
+        {
+            label: <NavLink to="/login"> Login </NavLink>,
+            key: 'login'
+        },
+        {
+            label: <NavLink to="/profile"> Профиль </NavLink>,
+            key: 'profile'
+        }
+
     ];
 
     return (
@@ -25,9 +34,11 @@ function LayOut() {
             <Header>
                 <NavLink to="/" className={setActive}> хомяк </NavLink>
                 <NavLink to="/about" className={setActive}> О странице </NavLink>
-                </Header>
+                <NavLink to="/login" className={setActive}> Login </NavLink>
+                <NavLink to="/profile" className={setActive}> Профиль </NavLink>  
+            </Header>
             
-            <Menu mode="horizontal" items={items} />
+            {/* <Menu mode="horizontal" items={items} /> */}
 
             <Content>
                 <Outlet/>

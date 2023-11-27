@@ -5,6 +5,8 @@ import {BrowserRouter} from 'react-router-dom';
 import { App } from 'antd';
 import MyApp from './App';
 
+localStorage.setItem('Access', 0);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
